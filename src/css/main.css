@@ -1,0 +1,63 @@
+body {
+  background: rgb(72, 74, 80);
+}
+
+.resumeBox {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0.1in;
+  width: 210mm;
+  height: 297mm;
+  background-color: rgb(250, 255, 255);
+}
+
+.main-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.skills {
+  grid-area: 1/1/3/5;
+  border: rgb(45, 0, 129) 1px solid;
+}
+
+.experience {
+  grid-area: 3/1/6/5;
+  border: rgb(45, 0, 129) 1px solid;
+}
+
+.general-info {
+  grid-area: 1/5/6/6;
+  border: rgb(45, 0, 129) 1px solid;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+  }
+  /* ... the rest of the rules ... */
+}
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 10px;
+}
+.photo-wrapper img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
